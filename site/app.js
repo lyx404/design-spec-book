@@ -54,8 +54,7 @@ const translations = {
     declarationCraft: "排版、信息密度、反馈和动效工艺",
     declarationDesign: "颜色、字体、间距、状态 token 和视觉规则",
     declarationComponents: "组件职责、语义边界和可访问性",
-    declarationTemplate: "页面类型、App shell 和响应式起点",
-    license: "MIT 许可证 / 2025"
+    declarationTemplate: "页面类型、App shell 和响应式起点"
   },
   en: {
     documentTitle: "Design Spec Book / Installation",
@@ -112,8 +111,7 @@ const translations = {
     declarationCraft: "Typography, density, feedback, and motion craft",
     declarationDesign: "Color, type, spacing, state tokens, and visual rules",
     declarationComponents: "Component responsibilities, semantic boundaries, and accessibility",
-    declarationTemplate: "Page types, app shell, and responsive starting points",
-    license: "MIT LICENSE / 2025"
+    declarationTemplate: "Page types, app shell, and responsive starting points"
   }
 };
 

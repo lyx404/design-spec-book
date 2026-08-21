@@ -315,7 +315,7 @@ h1 span {
 }
 
 .lead {
-  max-width: 760px;
+  width: 100%;
   margin: 0;
   color: var(--text-secondary);
   font-size: 18px;
@@ -583,6 +583,17 @@ h2 {
   letter-spacing: .06em;
   text-transform: uppercase;
   text-align: center;
+}
+
+.footer-meta a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 180ms ease-out;
+}
+
+.footer-meta a:hover,
+.footer-meta a:focus-visible {
+  color: var(--accent);
 }
 
 .coffee-dialog[hidden] {
