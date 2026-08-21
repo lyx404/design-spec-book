@@ -125,6 +125,8 @@ python3 -m http.server 4173 --directory site
 
 Then visit `http://localhost:4173`.
 
+The public introduction site is available at <https://lyx404.github.io/design-spec-book/>.
+
 ## License
 
 MIT. See [`LICENSE`](LICENSE).
