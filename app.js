@@ -11,13 +11,27 @@ const translations = {
     themeToLight: "切换到浅色模式",
     themeToDark: "切换到深色模式",
     github: "GITHUB",
-    lead: "把产品意图、业务语义和视觉规则保存成一套可以被 Agent 继续读取的设计上下文。",
+    featureExpandAria: "展开六份设计文档",
+    featureCollapseAria: "收起六份设计文档",
+    titlePrimary: "设计",
+    titleSecondary: "说明书",
+    leadPrefix: "把产品意图、业务语义和视觉规则保存成一套可以被 Agent 继续读取的",
+    leadHighlight: "设计上下文",
+    leadSuffix: "。",
     installationLabel: "01 / 安装",
     installationTitle: "安装",
     copyAria: "复制安装命令",
-    copyCommand: "复制命令",
+    copyCommand: "复制",
+    copyPromptAria: "复制提示词",
+    copyPrompt: "复制",
     copied: "已复制",
     copyFailed: "复制失败",
+    copiedAria: "安装命令已复制",
+    copyFailedAria: "复制安装命令失败",
+    promptCopied: "已复制",
+    promptCopyFailed: "复制失败",
+    promptCopiedAria: "提示词已复制",
+    promptCopyFailedAria: "复制提示词失败",
     footerBuildBy: "Build by ",
     footerSupportPrefix: "，如果对你有帮助，也欢迎请我",
     coffeeAction: "喝杯咖啡",
@@ -25,30 +39,25 @@ const translations = {
     coffeeDialogAria: "请我喝杯咖啡",
     coffeeCloseAria: "关闭喝杯咖啡窗口",
     coffeeImageAlt: "支付宝喝杯咖啡图片",
-    usagePrefix: "然后输入",
-    usageSuffix: "，为当前项目生成并同步六份设计声明。",
     usageLabel: "02 / 使用说明",
     usageTitle: "这样使用",
     usage1Title: "第一次使用",
     usage1Copy: "为当前项目生成六份设计说明。",
     usage1Prompt: "使用 $design-spec-book，为当前项目生成六份设计说明。",
     usage2Title: "同步项目变化",
-    usage2Copy: "读取最新代码，只更新对应的设计事实。",
-    usage2Prompt: "使用 $design-spec-book，把当前代码同步到设计说明中。",
+    usage2Copy: "代码改完后，让说明书一起更新。",
+    usage2Prompt: "使用 $design-spec-book，让说明书保持最新同步。",
     usage3Title: "调整设计规则",
-    usage3Copy: "指定页面或组件，更新它的视觉和交互规则。",
-    usage3Prompt: "使用 $design-spec-book，更新结算页面的设计规则。",
+    usage3Copy: "想改哪个页面，就直接告诉它。",
+    usage3Prompt: "使用 $design-spec-book，更新指定页面或组件的规则。",
     featuresLabel: "03 / 它能做什么",
     featuresTitle: "为项目建立设计上下文",
     feature1Title: "生成六份设计说明",
     feature1Copy: "按功能、业务、视觉、组件与页面模板分别整理。",
     feature2Title: "从代码中同步内容",
-    feature2Copy: "读取项目入口、组件、样式和 token，更新对应文档。",
+    feature2Copy: "读取项目代码，更新相关的设计说明。",
     feature3Title: "保留你的设计决定",
-    feature3Copy: "只更新受管区块，你手写的内容始终保留。",
-    declarationsLabel: "04 / 六份声明",
-    declarationsTitle: "六份文档",
-    declarationsNote: "每份回答一个问题",
+    feature3Copy: "保留你自己写的内容，只同步需要更新的部分。",
     declarationSpec: "功能目标、状态流转和验收标准",
     declarationDomain: "业务对象、术语、风险和责任规则",
     declarationCraft: "排版、信息密度、反馈和动效工艺",
@@ -68,13 +77,27 @@ const translations = {
     themeToLight: "Switch to light mode",
     themeToDark: "Switch to dark mode",
     github: "GITHUB",
-    lead: "Keep product intent, domain language, and visual rules in a design context an Agent can read and continue using.",
+    featureExpandAria: "Expand six design documents",
+    featureCollapseAria: "Collapse six design documents",
+    titlePrimary: "Design Spec",
+    titleSecondary: "Book",
+    leadPrefix: "Keep product intent, domain language, and visual rules in a ",
+    leadHighlight: "design context",
+    leadSuffix: " an Agent can read and continue using.",
     installationLabel: "01 / INSTALLATION",
     installationTitle: "Install",
     copyAria: "Copy installation command",
-    copyCommand: "COPY COMMAND",
+    copyCommand: "COPY",
+    copyPromptAria: "Copy prompt",
+    copyPrompt: "COPY",
     copied: "COPIED",
     copyFailed: "COPY FAILED",
+    copiedAria: "Installation command copied",
+    copyFailedAria: "Failed to copy installation command",
+    promptCopied: "COPIED",
+    promptCopyFailed: "COPY FAILED",
+    promptCopiedAria: "Prompt copied",
+    promptCopyFailedAria: "Failed to copy prompt",
     footerBuildBy: "Build by ",
     footerSupportPrefix: ". If this helped, you're welcome to share a ",
     coffeeAction: "coffee",
@@ -82,30 +105,25 @@ const translations = {
     coffeeDialogAria: "Support with coffee",
     coffeeCloseAria: "Close coffee support dialog",
     coffeeImageAlt: "Alipay coffee support QR code",
-    usagePrefix: "Then enter",
-    usageSuffix: " to generate and sync six design declarations for the current project.",
     usageLabel: "02 / USAGE",
     usageTitle: "How to use it",
     usage1Title: "Start a project",
     usage1Copy: "Create the six design documents for the current project.",
     usage1Prompt: "Use $design-spec-book to create the six design documents for this project.",
     usage2Title: "Sync project changes",
-    usage2Copy: "Read the latest code and update only the relevant design facts.",
-    usage2Prompt: "Use $design-spec-book to sync the current codebase into the design documents.",
+    usage2Copy: "After changing code, update the design notes too.",
+    usage2Prompt: "Use $design-spec-book to keep the design notes in sync.",
     usage3Title: "Update design rules",
-    usage3Copy: "Name a page or component to update its visual and interaction rules.",
-    usage3Prompt: "Use $design-spec-book to update the design rules for the checkout page.",
+    usage3Copy: "Tell it which page you want to change.",
+    usage3Prompt: "Use $design-spec-book to update the rules for a specified page or component.",
     featuresLabel: "03 / WHAT IT DOES",
     featuresTitle: "Build design context for a project",
     feature1Title: "Creates six design documents",
     feature1Copy: "Organizes product behavior, domain, visual rules, components, and page templates.",
     feature2Title: "Syncs from your codebase",
-    feature2Copy: "Reads entry points, components, styles, and tokens, then updates the relevant documents.",
+    feature2Copy: "Reads your code and updates the related design notes.",
     feature3Title: "Keeps your decisions intact",
-    feature3Copy: "Updates managed blocks only; content you write stays where it is.",
-    declarationsLabel: "04 / SIX DECLARATIONS",
-    declarationsTitle: "Six documents",
-    declarationsNote: "ONE QUESTION EACH",
+    feature3Copy: "Keeps your notes and changes only what needs syncing.",
     declarationSpec: "Feature goals, state flow, and acceptance criteria",
     declarationDomain: "Business objects, terminology, risks, and ownership rules",
     declarationCraft: "Typography, density, feedback, and motion craft",
@@ -121,11 +139,12 @@ const metaTheme = document.querySelector('meta[name="theme-color"]');
 const languageOptions = document.querySelectorAll("[data-language]");
 const themeToggle = document.querySelector("[data-theme-toggle]");
 const themeLabel = themeToggle?.querySelector(".theme-label");
-const copyButton = document.querySelector("[data-copy]");
-const copyLabel = copyButton?.querySelector(".copy-label");
+const copyButtons = document.querySelectorAll("[data-copy]");
 const coffeeDialog = document.querySelector("[data-coffee-dialog]");
 const coffeeOpenButton = document.querySelector("[data-coffee-open]");
 const coffeeCloseButtons = document.querySelectorAll("[data-coffee-close]");
+const featureToggle = document.querySelector("[data-feature-toggle]");
+const declarationPanel = document.querySelector("#declaration-details");
 
 let language = localStorage.getItem("design-spec-book-language") || "zh-CN";
 let theme = localStorage.getItem("design-spec-book-theme") || "light";
@@ -151,6 +170,9 @@ function applyLanguage(nextLanguage) {
   document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
     element.alt = t(element.dataset.i18nAlt);
   });
+  document.querySelectorAll("[data-copy-key]").forEach((element) => {
+    element.dataset.copy = t(element.dataset.copyKey);
+  });
   if (metaDescription) metaDescription.content = t("documentDescription");
   document.title = t("documentTitle");
 
@@ -159,7 +181,14 @@ function applyLanguage(nextLanguage) {
     option.classList.toggle("is-active", active);
     option.setAttribute("aria-pressed", String(active));
   });
+  updateFeatureToggle();
   updateThemeControl();
+}
+
+function updateFeatureToggle() {
+  if (!featureToggle) return;
+  const expanded = featureToggle.getAttribute("aria-expanded") === "true";
+  featureToggle.setAttribute("aria-label", t(expanded ? "featureCollapseAria" : "featureExpandAria"));
 }
 
 function updateThemeControl() {
@@ -182,17 +211,39 @@ themeToggle?.addEventListener("click", () => {
   updateThemeControl();
 });
 
-copyButton?.addEventListener("click", async () => {
-  try {
-    await navigator.clipboard.writeText(copyButton.dataset.copy);
-    copyLabel.textContent = t("copied");
-  } catch {
-    copyLabel.textContent = t("copyFailed");
-  }
+featureToggle?.addEventListener("click", () => {
+  const expanded = featureToggle.getAttribute("aria-expanded") === "true";
+  featureToggle.setAttribute("aria-expanded", String(!expanded));
+  if (declarationPanel) declarationPanel.hidden = expanded;
+  updateFeatureToggle();
+});
 
-  window.setTimeout(() => {
-    copyLabel.textContent = t("copyCommand");
-  }, 2200);
+copyButtons.forEach((copyButton) => {
+  const copyLabel = copyButton.querySelector(".copy-label");
+  if (!copyLabel) return;
+  const labelKey = copyButton.dataset.copyLabelKey || "copyCommand";
+  const copiedLabelKey = copyButton.dataset.copiedLabelKey || "copied";
+  const failedLabelKey = copyButton.dataset.copyFailedLabelKey || "copyFailed";
+  const copyAriaKey = copyButton.dataset.copyAriaKey || "copyAria";
+  const copiedAriaKey = copyButton.dataset.copiedAriaKey || "copiedAria";
+  const failedAriaKey = copyButton.dataset.copyFailedAriaKey || "copyFailedAria";
+  const setCopyState = (state) => {
+    copyButton.classList.toggle("is-copied", state === "copied");
+    copyButton.classList.toggle("is-error", state === "error");
+    copyLabel.textContent = t(state === "copied" ? copiedLabelKey : state === "error" ? failedLabelKey : labelKey);
+    copyButton.setAttribute("aria-label", t(state === "copied" ? copiedAriaKey : state === "error" ? failedAriaKey : copyAriaKey));
+  };
+
+  copyButton.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(copyButton.dataset.copy || "");
+      setCopyState("copied");
+    } catch {
+      setCopyState("error");
+    }
+
+    window.setTimeout(() => setCopyState("idle"), 2200);
+  });
 });
 
 function setCoffeeDialog(open) {
