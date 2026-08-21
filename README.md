@@ -1,6 +1,6 @@
 # Design Spec Book
 
-**选择语言 / Choose a language:** [中文](#zh) · [English](#en)
+** [中文](#zh) · [English](#en)
 
 <a id="zh"></a>
 
