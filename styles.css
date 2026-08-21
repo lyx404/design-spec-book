@@ -63,6 +63,10 @@ button {
 }
 
 .topbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,6 +74,10 @@ button {
   min-height: 72px;
   margin: 0 auto;
   border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transform: translateX(-50%);
 }
 
 .brand,
@@ -259,6 +267,7 @@ html[data-theme="dark"] .theme-moon {
 .doc-shell {
   width: min(var(--content-width), calc(100% - 48px));
   margin: 0 auto;
+  padding-top: 72px;
 }
 
 .intro {
@@ -383,6 +392,11 @@ h2 {
   transition: border-color 180ms ease-out, color 180ms ease-out;
 }
 
+.command-row > .copy-button {
+  border-color: transparent;
+  box-shadow: none;
+}
+
 .copy-button:hover,
 .copy-button:focus-visible {
   border-color: var(--ink);
@@ -437,7 +451,6 @@ h2 {
   gap: var(--space-md);
   align-items: start;
   padding: 20px 0;
-  border-bottom: 1px solid var(--border);
 }
 
 .feature-row.feature-expandable {
@@ -448,7 +461,7 @@ h2 {
   position: relative;
   display: grid;
   grid-column: 1 / -1;
-  grid-template-columns: 48px minmax(0, 1fr) 18px;
+  grid-template-columns: 48px minmax(0, 1fr);
   gap: var(--space-md);
   align-items: start;
   width: 100%;
@@ -460,18 +473,23 @@ h2 {
   text-align: left;
 }
 
+.feature-trigger > .row-index {
+  display: none;
+}
+
 .feature-expandable .feature-trigger {
   padding: 13px 2px;
-  transition: opacity 180ms ease-in-out;
+  transition: background-color 180ms ease-in-out;
 }
 
 .feature-expandable .feature-trigger:hover,
 .feature-expandable .feature-trigger:focus-visible {
-  opacity: .8;
+  background: var(--surface-raised);
 }
 
 .feature-content {
   min-width: 0;
+  grid-column: 2;
 }
 
 .feature-chevron {
@@ -480,6 +498,9 @@ h2 {
   width: 10px;
   height: 10px;
   margin-top: 3px;
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
   color: var(--text-secondary);
   transform: rotate(0);
   transition: transform 200ms ease-in-out, color 200ms ease-in-out;
@@ -517,6 +538,22 @@ h2 {
   border-top: 0;
 }
 
+#declaration-details {
+  border-top: 0;
+}
+
+#declaration-details .declaration-row {
+  border-bottom: 0;
+}
+
+#update-mechanism-details {
+  border-top: 0;
+}
+
+#update-mechanism-details .declaration-row {
+  border-bottom: 0;
+}
+
 .row-index {
   color: var(--text-disabled);
   font-size: 10px;
@@ -542,7 +579,6 @@ h2 {
   gap: var(--space-md);
   align-items: start;
   padding: 20px 0;
-  border-bottom: 1px solid var(--border);
 }
 
 .usage-row h3 {
@@ -563,7 +599,7 @@ h2 {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-sm);
-  max-width: 760px;
+  width: 100%;
   min-height: 42px;
   padding: 4px 6px 4px 12px;
   border-left: 2px solid var(--border-visible);
@@ -603,12 +639,8 @@ h2 {
   gap: var(--space-md);
   align-items: center;
   min-height: 58px;
+  padding-left: calc(48px + var(--space-md));
   border-bottom: 1px solid var(--border);
-  transition: background-color 180ms ease-in-out;
-}
-
-.declaration-row:hover {
-  background: var(--surface-raised);
 }
 
 .declaration-row code {
@@ -838,7 +870,7 @@ body.dialog-open {
   }
 
   .feature-trigger {
-    grid-template-columns: 36px minmax(0, 1fr) 16px;
+    grid-template-columns: 36px minmax(0, 1fr);
   }
 
   .usage-row {
@@ -848,7 +880,7 @@ body.dialog-open {
   .declaration-row {
     grid-template-columns: minmax(112px, .45fr) minmax(0, 1fr);
     gap: 12px;
-    padding: 13px 0;
+    padding: 13px 0 13px calc(36px + var(--space-md));
   }
 
   .declaration-row span {

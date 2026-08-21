@@ -11,14 +11,14 @@ const translations = {
     themeToLight: "切换到浅色模式",
     themeToDark: "切换到深色模式",
     github: "GITHUB",
-    featureExpandAria: "展开六份设计文档",
-    featureCollapseAria: "收起六份设计文档",
+    featureExpandAria: "展开详情",
+    featureCollapseAria: "收起详情",
     titlePrimary: "设计",
     titleSecondary: "说明书",
     leadPrefix: "把产品意图、业务语义和视觉规则保存成一套可以被 Agent 继续读取的",
     leadHighlight: "设计上下文",
     leadSuffix: "。",
-    installationLabel: "01 / 安装",
+    installationLabel: "01 / 快捷安装",
     installationTitle: "安装",
     copyAria: "复制安装命令",
     copyCommand: "复制",
@@ -42,22 +42,26 @@ const translations = {
     usageLabel: "02 / 使用说明",
     usageTitle: "这样使用",
     usage1Title: "第一次使用",
-    usage1Copy: "为当前项目生成六份设计说明。",
-    usage1Prompt: "使用 $design-spec-book，为当前项目生成六份设计说明。",
+    usage1Copy: "为当前项目生成设计说明书。",
+    usage1Prompt: "使用 $design-spec-book，为当前项目生成设计说明书。",
     usage2Title: "同步项目变化",
     usage2Copy: "代码改完后，让说明书一起更新。",
-    usage2Prompt: "使用 $design-spec-book，让说明书保持最新同步。",
+    usage2Prompt: "使用 $design-spec-book，读取当前项目的最新代码，同步更新相关的设计说明书。",
     usage3Title: "调整设计规则",
     usage3Copy: "想改哪个页面，就直接告诉它。",
-    usage3Prompt: "使用 $design-spec-book，更新指定页面或组件的规则。",
+    usage3Prompt: "使用 $design-spec-book，按照当前最新的视觉与交互规则，更新设计说明书。",
     featuresLabel: "03 / 它能做什么",
     featuresTitle: "为项目建立设计上下文",
-    feature1Title: "生成六份设计说明",
+    feature1Title: "基于你的项目生成设计说明书",
     feature1Copy: "按功能、业务、视觉、组件与页面模板分别整理。",
-    feature2Title: "从代码中同步内容",
-    feature2Copy: "读取项目代码，更新相关的设计说明。",
-    feature3Title: "保留你的设计决定",
-    feature3Copy: "保留你自己写的内容，只同步需要更新的部分。",
+    feature2Title: "说明书更新机制",
+    feature2Copy: "根据代码变更，自动或手动同步相关设计说明书。",
+    mechanismDetect: "→ 自动更新",
+    mechanismDetectCopy: "代码变更静默期结束后，自动同步受影响的设计说明书",
+    mechanismMap: "→ 手动更新",
+    mechanismMapCopy: "用户发起同步请求后，立即检查代码变更并更新相关内容",
+    mechanismPreserve: "→ 中间工作状态",
+    mechanismPreserveCopy: "持续修改期间，仅记录待同步变更，不改写正式设计说明书",
     declarationSpec: "功能目标、状态流转和验收标准",
     declarationDomain: "业务对象、术语、风险和责任规则",
     declarationCraft: "排版、信息密度、反馈和动效工艺",
@@ -77,14 +81,14 @@ const translations = {
     themeToLight: "Switch to light mode",
     themeToDark: "Switch to dark mode",
     github: "GITHUB",
-    featureExpandAria: "Expand six design documents",
-    featureCollapseAria: "Collapse six design documents",
+    featureExpandAria: "Expand details",
+    featureCollapseAria: "Collapse details",
     titlePrimary: "Design Spec",
     titleSecondary: "Book",
     leadPrefix: "Keep product intent, domain language, and visual rules in a ",
     leadHighlight: "design context",
     leadSuffix: " an Agent can read and continue using.",
-    installationLabel: "01 / INSTALLATION",
+    installationLabel: "01 / QUICK INSTALL",
     installationTitle: "Install",
     copyAria: "Copy installation command",
     copyCommand: "COPY",
@@ -108,22 +112,26 @@ const translations = {
     usageLabel: "02 / USAGE",
     usageTitle: "How to use it",
     usage1Title: "Start a project",
-    usage1Copy: "Create the six design documents for the current project.",
-    usage1Prompt: "Use $design-spec-book to create the six design documents for this project.",
+    usage1Copy: "Create a design spec book for the current project.",
+    usage1Prompt: "Use $design-spec-book to create a design spec book for this project.",
     usage2Title: "Sync project changes",
     usage2Copy: "After changing code, update the design notes too.",
-    usage2Prompt: "Use $design-spec-book to keep the design notes in sync.",
+    usage2Prompt: "Use $design-spec-book to read the latest code in this project and update the related design spec book.",
     usage3Title: "Update design rules",
     usage3Copy: "Tell it which page you want to change.",
-    usage3Prompt: "Use $design-spec-book to update the rules for a specified page or component.",
+    usage3Prompt: "Use $design-spec-book to update the design spec book according to the latest visual and interaction rules.",
     featuresLabel: "03 / WHAT IT DOES",
     featuresTitle: "Build design context for a project",
-    feature1Title: "Creates six design documents",
+    feature1Title: "Creates a design spec book for your project",
     feature1Copy: "Organizes product behavior, domain, visual rules, components, and page templates.",
-    feature2Title: "Syncs from your codebase",
-    feature2Copy: "Reads your code and updates the related design notes.",
-    feature3Title: "Keeps your decisions intact",
-    feature3Copy: "Keeps your notes and changes only what needs syncing.",
+    feature2Title: "Documentation update rules",
+    feature2Copy: "Sync related design documents automatically or manually based on code changes.",
+    mechanismDetect: "-> Automatic updates",
+    mechanismDetectCopy: "After the code-change quiet period ends, sync the affected design documents automatically.",
+    mechanismMap: "-> Manual updates",
+    mechanismMapCopy: "When the user requests a sync, inspect code changes and update the related content immediately.",
+    mechanismPreserve: "-> In-progress state",
+    mechanismPreserveCopy: "During active changes, record pending updates without rewriting the formal design documents.",
     declarationSpec: "Feature goals, state flow, and acceptance criteria",
     declarationDomain: "Business objects, terminology, risks, and ownership rules",
     declarationCraft: "Typography, density, feedback, and motion craft",
@@ -143,8 +151,7 @@ const copyButtons = document.querySelectorAll("[data-copy]");
 const coffeeDialog = document.querySelector("[data-coffee-dialog]");
 const coffeeOpenButton = document.querySelector("[data-coffee-open]");
 const coffeeCloseButtons = document.querySelectorAll("[data-coffee-close]");
-const featureToggle = document.querySelector("[data-feature-toggle]");
-const declarationPanel = document.querySelector("#declaration-details");
+const featureToggles = document.querySelectorAll("[data-feature-toggle]");
 
 let language = localStorage.getItem("design-spec-book-language") || "zh-CN";
 let theme = localStorage.getItem("design-spec-book-theme") || "light";
@@ -181,14 +188,21 @@ function applyLanguage(nextLanguage) {
     option.classList.toggle("is-active", active);
     option.setAttribute("aria-pressed", String(active));
   });
-  updateFeatureToggle();
+  featureToggles.forEach(updateFeatureToggle);
   updateThemeControl();
 }
 
-function updateFeatureToggle() {
+function updateFeatureToggle(featureToggle) {
   if (!featureToggle) return;
   const expanded = featureToggle.getAttribute("aria-expanded") === "true";
   featureToggle.setAttribute("aria-label", t(expanded ? "featureCollapseAria" : "featureExpandAria"));
+}
+
+function setFeatureExpanded(featureToggle, expanded) {
+  const panel = document.getElementById(featureToggle.getAttribute("aria-controls"));
+  featureToggle.setAttribute("aria-expanded", String(expanded));
+  if (panel) panel.hidden = !expanded;
+  updateFeatureToggle(featureToggle);
 }
 
 function updateThemeControl() {
@@ -211,11 +225,16 @@ themeToggle?.addEventListener("click", () => {
   updateThemeControl();
 });
 
-featureToggle?.addEventListener("click", () => {
-  const expanded = featureToggle.getAttribute("aria-expanded") === "true";
-  featureToggle.setAttribute("aria-expanded", String(!expanded));
-  if (declarationPanel) declarationPanel.hidden = expanded;
-  updateFeatureToggle();
+featureToggles.forEach((featureToggle) => {
+  featureToggle.addEventListener("click", () => {
+    const expanded = featureToggle.getAttribute("aria-expanded") === "true";
+    if (!expanded) {
+      featureToggles.forEach((otherToggle) => {
+        if (otherToggle !== featureToggle) setFeatureExpanded(otherToggle, false);
+      });
+    }
+    setFeatureExpanded(featureToggle, !expanded);
+  });
 });
 
 copyButtons.forEach((copyButton) => {
