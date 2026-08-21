@@ -23,7 +23,22 @@
           <button class="language-option" type="button" data-language="en" aria-pressed="false">EN</button>
         </div>
         <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" data-i18n-aria="themeAria" data-i18n-title="themeAria">
-          <span class="theme-icon" aria-hidden="true"></span>
+          <span class="theme-icon" aria-hidden="true">
+            <svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
           <span class="theme-label" data-i18n="themeLight">浅色</span>
         </button>
         <a class="github-link" href="https://github.com/lyx404/design-spec-book" target="_blank" rel="noreferrer"><span data-i18n="github">GITHUB</span> <span aria-hidden="true">↗</span></a>
@@ -32,28 +47,36 @@
 
     <main id="top" class="doc-shell">
       <section class="intro" aria-labelledby="page-title">
-        <div class="meta-line">
-          <span>V1.0</span>
-        </div>
-        <h1 id="page-title">Design Spec<br><span>Book</span></h1>
-        <p class="lead" data-i18n="lead">把产品意图、业务语义和视觉规则保存成一套可以被 Agent 继续读取的设计上下文。</p>
+        <h1 id="page-title"><span data-i18n="titlePrimary">设计</span><br><span class="title-secondary" data-i18n="titleSecondary">说明书</span></h1>
+        <p class="lead"><span data-i18n="leadPrefix">把产品意图、业务语义和视觉规则保存成一套可以被 Agent 继续读取的</span><span class="lead-highlight" data-i18n="leadHighlight">设计上下文</span><span data-i18n="leadSuffix">。</span></p>
       </section>
 
       <section class="doc-section" id="installation" aria-labelledby="installation-title">
         <div class="section-heading">
           <div>
-            <p class="section-label" data-i18n="installationLabel">01 / 安装</p>
+            <p class="section-label" data-i18n="installationLabel">01 / 快捷安装</p>
             <h2 id="installation-title" data-i18n="installationTitle">安装</h2>
           </div>
         </div>
         <div class="command-row">
           <code>npx skills add lyx404/design-spec-book -s design-spec-book -g -y</code>
           <button class="copy-button" type="button" data-copy="npx skills add lyx404/design-spec-book -s design-spec-book -g -y" data-i18n-aria="copyAria">
-            <span class="copy-icon" aria-hidden="true"></span>
+            <span class="copy-icon" aria-hidden="true">
+              <svg class="copy-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                <rect width="14" height="14" x="8" y="8" rx="2"></rect>
+                <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+              </svg>
+              <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                <path d="m5 12 4 4L19 6"></path>
+              </svg>
+              <svg class="error-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+              </svg>
+            </span>
             <span class="copy-label" data-i18n="copyCommand">复制命令</span>
           </button>
         </div>
-        <p class="usage-line"><span data-i18n="usagePrefix">然后输入</span> <code>$design-spec-book</code><span data-i18n="usageSuffix">，为当前项目生成并同步六份设计声明。</span></p>
       </section>
 
       <section class="doc-section" id="usage" aria-labelledby="usage-title">
@@ -68,8 +91,14 @@
             <span class="row-index">01</span>
             <div>
               <h3 data-i18n="usage1Title">第一次使用</h3>
-              <p data-i18n="usage1Copy">为当前项目生成六份设计说明。</p>
-              <code data-i18n="usage1Prompt">Use $design-spec-book to create the six design documents for this project.</code>
+              <p data-i18n="usage1Copy">为当前项目生成设计说明书。</p>
+              <div class="prompt-row">
+                <code data-i18n="usage1Prompt">使用 $design-spec-book，为当前项目生成设计说明书。</code>
+                <button class="copy-button prompt-copy" type="button" data-copy="使用 $design-spec-book，为当前项目生成设计说明书。" data-copy-key="usage1Prompt" data-copy-label-key="copyPrompt" data-copy-aria-key="copyPromptAria" data-copied-label-key="promptCopied" data-copied-aria-key="promptCopiedAria" data-copy-failed-label-key="promptCopyFailed" data-copy-failed-aria-key="promptCopyFailedAria" data-i18n-aria="copyPromptAria">
+                  <span class="copy-icon" aria-hidden="true"><svg class="copy-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="m5 12 4 4L19 6"></path></svg><svg class="error-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span>
+                  <span class="copy-label" data-i18n="copyPrompt">复制</span>
+                </button>
+              </div>
             </div>
           </article>
           <article class="usage-row">
@@ -77,7 +106,13 @@
             <div>
               <h3 data-i18n="usage2Title">同步项目变化</h3>
               <p data-i18n="usage2Copy">读取最新代码，只更新对应的设计事实。</p>
-              <code data-i18n="usage2Prompt">Use $design-spec-book to sync the current codebase into the design documents.</code>
+              <div class="prompt-row">
+                <code data-i18n="usage2Prompt">使用 $design-spec-book，读取当前项目的最新代码，同步更新相关的设计说明书。</code>
+                <button class="copy-button prompt-copy" type="button" data-copy="使用 $design-spec-book，读取当前项目的最新代码，同步更新相关的设计说明书。" data-copy-key="usage2Prompt" data-copy-label-key="copyPrompt" data-copy-aria-key="copyPromptAria" data-copied-label-key="promptCopied" data-copied-aria-key="promptCopiedAria" data-copy-failed-label-key="promptCopyFailed" data-copy-failed-aria-key="promptCopyFailedAria" data-i18n-aria="copyPromptAria">
+                  <span class="copy-icon" aria-hidden="true"><svg class="copy-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="m5 12 4 4L19 6"></path></svg><svg class="error-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span>
+                  <span class="copy-label" data-i18n="copyPrompt">复制</span>
+                </button>
+              </div>
             </div>
           </article>
           <article class="usage-row">
@@ -85,7 +120,13 @@
             <div>
               <h3 data-i18n="usage3Title">调整设计规则</h3>
               <p data-i18n="usage3Copy">指定页面或组件，更新它的视觉和交互规则。</p>
-              <code data-i18n="usage3Prompt">Use $design-spec-book to update the design rules for the checkout page.</code>
+              <div class="prompt-row">
+                <code data-i18n="usage3Prompt">使用 $design-spec-book，按照当前最新的视觉与交互规则，更新设计说明书。</code>
+                <button class="copy-button prompt-copy" type="button" data-copy="使用 $design-spec-book，按照当前最新的视觉与交互规则，更新设计说明书。" data-copy-key="usage3Prompt" data-copy-label-key="copyPrompt" data-copy-aria-key="copyPromptAria" data-copied-label-key="promptCopied" data-copied-aria-key="promptCopiedAria" data-copy-failed-label-key="promptCopyFailed" data-copy-failed-aria-key="promptCopyFailedAria" data-i18n-aria="copyPromptAria">
+                  <span class="copy-icon" aria-hidden="true"><svg class="copy-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="m5 12 4 4L19 6"></path></svg><svg class="error-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span>
+                  <span class="copy-label" data-i18n="copyPrompt">复制</span>
+                </button>
+              </div>
             </div>
           </article>
         </div>
@@ -99,58 +140,56 @@
           </div>
         </div>
         <div class="feature-list">
-          <article class="feature-row">
-            <span class="row-index">01</span>
-            <div>
-              <h3 data-i18n="feature1Title">生成六份设计说明</h3>
+          <article class="feature-row feature-expandable">
+            <button class="feature-trigger" type="button" data-feature-toggle aria-expanded="true" aria-controls="declaration-details" data-i18n-aria="featureExpandAria">
+              <span class="row-index" aria-hidden="true"></span>
+              <span class="feature-content">
+              <h3 data-i18n="feature1Title">基于你的项目生成设计说明书</h3>
               <p data-i18n="feature1Copy">按功能、业务、视觉、组件与页面模板分别整理。</p>
+              </span>
+              <span class="feature-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="declaration-panel" id="declaration-details">
+              <div class="declaration-list">
+                <div class="declaration-row"><code>spec</code><span data-i18n="declarationSpec">功能目标、状态流转和验收标准</span></div>
+                <div class="declaration-row"><code>domain</code><span data-i18n="declarationDomain">业务对象、术语、风险和责任规则</span></div>
+                <div class="declaration-row"><code>craft</code><span data-i18n="declarationCraft">排版、信息密度、反馈和动效工艺</span></div>
+                <div class="declaration-row"><code>design</code><span data-i18n="declarationDesign">颜色、字体、间距、状态 token 和视觉规则</span></div>
+                <div class="declaration-row"><code>components</code><span data-i18n="declarationComponents">组件职责、语义边界和可访问性</span></div>
+                <div class="declaration-row"><code>template</code><span data-i18n="declarationTemplate">页面类型、App shell 和响应式起点</span></div>
+              </div>
             </div>
           </article>
-          <article class="feature-row">
-            <span class="row-index">02</span>
-            <div>
-              <h3 data-i18n="feature2Title">从代码中同步内容</h3>
-              <p data-i18n="feature2Copy">读取项目入口、组件、样式和 token，更新对应文档。</p>
+          <article class="feature-row feature-expandable">
+            <button class="feature-trigger" type="button" data-feature-toggle aria-expanded="false" aria-controls="update-mechanism-details" data-i18n-aria="featureExpandAria">
+              <span class="row-index" aria-hidden="true"></span>
+              <span class="feature-content">
+                <h3 data-i18n="feature2Title">说明书更新机制</h3>
+                <p data-i18n="feature2Copy">根据代码变更，自动或手动同步相关设计说明书。</p>
+              </span>
+              <span class="feature-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="declaration-panel" id="update-mechanism-details" hidden>
+              <div class="declaration-list">
+                <div class="declaration-row"><code data-i18n="mechanismDetect">→ 自动更新</code><span data-i18n="mechanismDetectCopy">代码变更静默期结束后，自动同步受影响的设计说明书</span></div>
+                <div class="declaration-row"><code data-i18n="mechanismMap">→ 手动更新</code><span data-i18n="mechanismMapCopy">用户发起同步请求后，立即检查代码变更并更新相关内容</span></div>
+                <div class="declaration-row"><code data-i18n="mechanismPreserve">→ 中间工作状态</code><span data-i18n="mechanismPreserveCopy">持续修改期间，仅记录待同步变更，不改写正式设计说明书</span></div>
+              </div>
             </div>
           </article>
-          <article class="feature-row">
-            <span class="row-index">03</span>
-            <div>
-              <h3 data-i18n="feature3Title">保留你的设计决定</h3>
-              <p data-i18n="feature3Copy">只更新受管区块，你手写的内容始终保留。</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="doc-section" id="declarations" aria-labelledby="declarations-title">
-        <div class="section-heading">
-          <div>
-            <p class="section-label" data-i18n="declarationsLabel">04 / 六份声明</p>
-            <h2 id="declarations-title" data-i18n="declarationsTitle">六份文档</h2>
-          </div>
-          <span class="section-note" data-i18n="declarationsNote">每份回答一个问题</span>
-        </div>
-        <div class="declaration-list">
-          <div class="declaration-row"><code>spec.md</code><span data-i18n="declarationSpec">功能目标、状态流转和验收标准</span></div>
-          <div class="declaration-row"><code>domain.md</code><span data-i18n="declarationDomain">业务对象、术语、风险和责任规则</span></div>
-          <div class="declaration-row"><code>craft.md</code><span data-i18n="declarationCraft">排版、信息密度、反馈和动效工艺</span></div>
-          <div class="declaration-row"><code>design.md</code><span data-i18n="declarationDesign">颜色、字体、间距、状态 token 和视觉规则</span></div>
-          <div class="declaration-row"><code>components</code><span data-i18n="declarationComponents">组件职责、语义边界和可访问性</span></div>
-          <div class="declaration-row"><code>template</code><span data-i18n="declarationTemplate">页面类型、App shell 和响应式起点</span></div>
         </div>
       </section>
 
     </main>
 
     <footer class="site-footer">
+      <div class="footer-meta">
+        <a href="https://mochi-ui-sounds.vercel.app/" target="_blank" rel="noreferrer">Mochi UI Sounds ↗</a>
+      </div>
       <p class="footer-credit">
         <span data-i18n="footerBuildBy">Build by </span>
         <a href="https://www.xiaohongshu.com/user/profile/63bac95100000000260062bb" target="_blank" rel="noreferrer">多魚</a><span data-i18n="footerSupportPrefix">，如果对你有帮助，也欢迎请我</span><button class="support-link" type="button" data-coffee-open data-i18n-aria="coffeeOpenAria" data-i18n-title="coffeeOpenAria" data-i18n="coffeeAction">喝杯咖啡</button>
       </p>
-      <div class="footer-meta">
-        <a href="https://mochi-ui-sounds.vercel.app/" target="_blank" rel="noreferrer">Mochi UI Sounds ↗</a>
-      </div>
     </footer>
 
     <div class="coffee-dialog" data-coffee-dialog hidden aria-hidden="true">
