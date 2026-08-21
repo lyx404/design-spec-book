@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Design Spec Book：为 Codex 保存可持续使用的产品设计上下文。">
     <meta name="theme-color" content="#f5f5f5">
-    <title>Design Spec Book / Installation</title>
+    <title data-i18n="documentTitle">Design Spec Book / 安装</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -13,78 +13,112 @@
   </head>
   <body>
     <header class="topbar">
-      <a class="brand" href="#top" aria-label="Design Spec Book 首页">
-        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <a class="brand" href="#top" data-i18n-aria="brandAria">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
         <span>DESIGN SPEC BOOK</span>
       </a>
-      <nav class="topnav" aria-label="页面导航">
-        <a href="#installation">INSTALL</a>
-        <a href="#declarations">FILES</a>
-        <a class="github-link" href="https://github.com/lyx404/design-spec-book" target="_blank" rel="noreferrer">GITHUB <span aria-hidden="true">↗</span></a>
+      <nav class="topnav" data-i18n-aria="topnavAria">
+        <div class="language-switch" role="group" data-i18n-aria="languageAria">
+          <button class="language-option is-active" type="button" data-language="zh-CN" aria-pressed="true">中</button>
+          <button class="language-option" type="button" data-language="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" data-i18n-aria="themeAria" data-i18n-title="themeAria">
+          <span class="theme-icon" aria-hidden="true"></span>
+          <span class="theme-label" data-i18n="themeLight">浅色</span>
+        </button>
+        <a class="github-link" href="https://github.com/lyx404/design-spec-book" target="_blank" rel="noreferrer"><span data-i18n="github">GITHUB</span> <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
 
     <main id="top" class="doc-shell">
       <section class="intro" aria-labelledby="page-title">
         <div class="meta-line">
-          <span class="signal-dot" aria-hidden="true"></span>
-          <span>CODEX SKILL / DESIGN CONTEXT</span>
           <span>V1.0</span>
         </div>
         <h1 id="page-title">Design Spec<br><span>Book</span></h1>
-        <p class="lead">把产品意图、业务语义和视觉规则保存成一套可以被 Agent 继续读取的设计上下文。</p>
+        <p class="lead" data-i18n="lead">把产品意图、业务语义和视觉规则保存成一套可以被 Agent 继续读取的设计上下文。</p>
       </section>
 
       <section class="doc-section" id="installation" aria-labelledby="installation-title">
         <div class="section-heading">
           <div>
-            <p class="section-label">01 / INSTALLATION</p>
-            <h2 id="installation-title">安装</h2>
+            <p class="section-label" data-i18n="installationLabel">01 / 安装</p>
+            <h2 id="installation-title" data-i18n="installationTitle">安装</h2>
           </div>
-          <button class="copy-button" type="button" data-copy="npx skills add lyx404/design-spec-book -s design-spec-book -g -y" aria-label="复制安装命令">
-            <span class="copy-icon" aria-hidden="true"></span>
-            <span class="copy-label">COPY COMMAND</span>
-          </button>
         </div>
-        <p class="section-copy">使用短命令安装全局 Skill。安装完成后，在新的 Codex 对话中调用它。</p>
         <div class="command-row">
           <code>npx skills add lyx404/design-spec-book -s design-spec-book -g -y</code>
-          <span class="command-status" role="status" aria-live="polite">READY</span>
+          <button class="copy-button" type="button" data-copy="npx skills add lyx404/design-spec-book -s design-spec-book -g -y" data-i18n-aria="copyAria">
+            <span class="copy-icon" aria-hidden="true"></span>
+            <span class="copy-label" data-i18n="copyCommand">复制命令</span>
+          </button>
         </div>
-        <p class="usage-line">然后输入 <code>$design-spec-book</code>，为当前项目生成并同步六份设计声明。</p>
+        <p class="usage-line"><span data-i18n="usagePrefix">然后输入</span> <code>$design-spec-book</code><span data-i18n="usageSuffix">，为当前项目生成并同步六份设计声明。</span></p>
+      </section>
+
+      <section class="doc-section" id="usage" aria-labelledby="usage-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-label" data-i18n="usageLabel">02 / 使用说明</p>
+            <h2 id="usage-title" data-i18n="usageTitle">这样使用</h2>
+          </div>
+        </div>
+        <div class="usage-list">
+          <article class="usage-row">
+            <span class="row-index">01</span>
+            <div>
+              <h3 data-i18n="usage1Title">第一次使用</h3>
+              <p data-i18n="usage1Copy">为当前项目生成六份设计说明。</p>
+              <code data-i18n="usage1Prompt">Use $design-spec-book to create the six design documents for this project.</code>
+            </div>
+          </article>
+          <article class="usage-row">
+            <span class="row-index">02</span>
+            <div>
+              <h3 data-i18n="usage2Title">同步项目变化</h3>
+              <p data-i18n="usage2Copy">读取最新代码，只更新对应的设计事实。</p>
+              <code data-i18n="usage2Prompt">Use $design-spec-book to sync the current codebase into the design documents.</code>
+            </div>
+          </article>
+          <article class="usage-row">
+            <span class="row-index">03</span>
+            <div>
+              <h3 data-i18n="usage3Title">调整设计规则</h3>
+              <p data-i18n="usage3Copy">指定页面或组件，更新它的视觉和交互规则。</p>
+              <code data-i18n="usage3Prompt">Use $design-spec-book to update the design rules for the checkout page.</code>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="doc-section" id="features" aria-labelledby="features-title">
         <div class="section-heading">
           <div>
-            <p class="section-label">02 / WHAT IT DOES</p>
-            <h2 id="features-title">它保留什么</h2>
+            <p class="section-label" data-i18n="featuresLabel">03 / 它能做什么</p>
+            <h2 id="features-title" data-i18n="featuresTitle">为项目建立设计上下文</h2>
           </div>
         </div>
         <div class="feature-list">
           <article class="feature-row">
             <span class="row-index">01</span>
             <div>
-              <h3>设计判断</h3>
-              <p>把功能行为、领域语义、视觉系统和页面结构分开记录。</p>
+              <h3 data-i18n="feature1Title">生成六份设计说明</h3>
+              <p data-i18n="feature1Copy">按功能、业务、视觉、组件与页面模板分别整理。</p>
             </div>
-            <span class="row-tag">STRUCTURE</span>
           </article>
           <article class="feature-row">
             <span class="row-index">02</span>
             <div>
-              <h3>项目事实</h3>
-              <p>扫描入口、路由、组件、样式和 token，只同步代码中可观察的事实。</p>
+              <h3 data-i18n="feature2Title">从代码中同步内容</h3>
+              <p data-i18n="feature2Copy">读取项目入口、组件、样式和 token，更新对应文档。</p>
             </div>
-            <span class="row-tag">FACTS</span>
           </article>
           <article class="feature-row">
             <span class="row-index">03</span>
             <div>
-              <h3>人的决定</h3>
-              <p>受管区块之外的内容始终保留，自动同步不会覆盖你的设计判断。</p>
+              <h3 data-i18n="feature3Title">保留你的设计决定</h3>
+              <p data-i18n="feature3Copy">只更新受管区块，你手写的内容始终保留。</p>
             </div>
-            <span class="row-tag">PRESERVED</span>
           </article>
         </div>
       </section>
@@ -92,39 +126,41 @@
       <section class="doc-section" id="declarations" aria-labelledby="declarations-title">
         <div class="section-heading">
           <div>
-            <p class="section-label">03 / SIX DECLARATIONS</p>
-            <h2 id="declarations-title">六份文档</h2>
+            <p class="section-label" data-i18n="declarationsLabel">04 / 六份声明</p>
+            <h2 id="declarations-title" data-i18n="declarationsTitle">六份文档</h2>
           </div>
-          <span class="section-note">ONE QUESTION EACH</span>
+          <span class="section-note" data-i18n="declarationsNote">每份回答一个问题</span>
         </div>
         <div class="declaration-list">
-          <div class="declaration-row"><code>spec.md</code><span>功能目标、状态流转和验收标准</span><span class="row-arrow" aria-hidden="true">→</span></div>
-          <div class="declaration-row"><code>domain.md</code><span>业务对象、术语、风险和责任规则</span><span class="row-arrow" aria-hidden="true">→</span></div>
-          <div class="declaration-row"><code>craft.md</code><span>排版、信息密度、反馈和动效工艺</span><span class="row-arrow" aria-hidden="true">→</span></div>
-          <div class="declaration-row"><code>design.md</code><span>颜色、字体、间距、状态 token 和视觉规则</span><span class="row-arrow" aria-hidden="true">→</span></div>
-          <div class="declaration-row"><code>components</code><span>组件职责、语义边界和可访问性</span><span class="row-arrow" aria-hidden="true">→</span></div>
-          <div class="declaration-row"><code>template</code><span>页面类型、App shell 和响应式起点</span><span class="row-arrow" aria-hidden="true">→</span></div>
+          <div class="declaration-row"><code>spec.md</code><span data-i18n="declarationSpec">功能目标、状态流转和验收标准</span></div>
+          <div class="declaration-row"><code>domain.md</code><span data-i18n="declarationDomain">业务对象、术语、风险和责任规则</span></div>
+          <div class="declaration-row"><code>craft.md</code><span data-i18n="declarationCraft">排版、信息密度、反馈和动效工艺</span></div>
+          <div class="declaration-row"><code>design.md</code><span data-i18n="declarationDesign">颜色、字体、间距、状态 token 和视觉规则</span></div>
+          <div class="declaration-row"><code>components</code><span data-i18n="declarationComponents">组件职责、语义边界和可访问性</span></div>
+          <div class="declaration-row"><code>template</code><span data-i18n="declarationTemplate">页面类型、App shell 和响应式起点</span></div>
         </div>
       </section>
 
-      <section class="doc-section final-section" aria-labelledby="next-title">
-        <div class="section-heading">
-          <div>
-            <p class="section-label">04 / NEXT</p>
-            <h2 id="next-title">从已确认的事实开始。</h2>
-          </div>
-        </div>
-        <div class="final-links">
-          <a href="https://github.com/lyx404/design-spec-book" target="_blank" rel="noreferrer">查看 GitHub 仓库 <span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/lyx404/design-spec-book#readme" target="_blank" rel="noreferrer">阅读 README <span aria-hidden="true">↗</span></a>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
-      <span>DSB / DESIGN SPEC BOOK</span>
-      <span>MIT LICENSE / 2025</span>
+      <p class="footer-credit">
+        <span data-i18n="footerBuildBy">Build by </span>
+        <a href="https://www.xiaohongshu.com/user/profile/63bac95100000000260062bb" target="_blank" rel="noreferrer">多魚</a><span data-i18n="footerSupportPrefix">，如果对你有帮助，也欢迎请我</span><button class="support-link" type="button" data-coffee-open data-i18n-aria="coffeeOpenAria" data-i18n-title="coffeeOpenAria" data-i18n="coffeeAction">喝杯咖啡</button>
+      </p>
+      <div class="footer-meta">
+        <span>DSB / DESIGN SPEC BOOK</span>
+        <span data-i18n="license">MIT 许可证 / 2025</span>
+      </div>
     </footer>
+
+    <div class="coffee-dialog" data-coffee-dialog hidden aria-hidden="true">
+      <div class="coffee-backdrop" data-coffee-close></div>
+      <section class="coffee-panel" role="dialog" aria-modal="true" data-i18n-aria="coffeeDialogAria">
+        <button class="coffee-close" type="button" data-coffee-close data-i18n-aria="coffeeCloseAria" data-i18n-title="coffeeCloseAria">×</button>
+        <img src="coffee-alipay.png" data-i18n-alt="coffeeImageAlt" alt="支付宝喝杯咖啡图片">
+      </section>
+    </div>
 
     <script src="app.js"></script>
   </body>
