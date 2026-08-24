@@ -149,7 +149,7 @@ Allowed values: `[space-1]`, `[space-2]`, `[space-3]`, `[space-4]` …
 
 ## 7. Components
 
-只记录与视觉系统直接相关的组件表现、图表编码和可复用模式；组件语义边界的完整登记仍属于 `components` 文档。
+只记录与视觉系统直接相关的组件表现、图表编码和可复用模式；组件语义边界的完整登记仍属于 `components.md` 文档。
 
 ### Component visual patterns
 

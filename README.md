@@ -20,7 +20,7 @@ $design-spec-book
 
 ### 功能
 
-- 生成并维护六份设计声明：`spec.md`、`domain.md`、`craft.md`、`design.md`、`components`、`template`。
+- 生成并维护六份设计声明：`spec.md`、`domain.md`、`craft.md`、`design.md`、`components.md`、`template.md`。
 - 分离功能行为、领域语义、设计工艺、视觉 token、组件边界和页面结构。
 - 自动扫描项目入口、路由、组件、样式和 token，只同步可观察的项目事实。
 - 通过受管区块保护人工填写的设计判断，不覆盖用户修改。
@@ -34,8 +34,8 @@ $design-spec-book
 | `domain.md` | 业务对象、术语、风险和责任规则 |
 | `craft.md` | 排版、信息密度、状态反馈和动效工艺 |
 | `design.md` | 颜色、字体、间距、状态 token 和视觉规则 |
-| `components` | 组件职责、语义边界和可访问性 |
-| `template` | 页面类型、App shell、页面骨架和响应式起点 |
+| `components.md` | 组件职责、语义边界和可访问性 |
+| `template.md` | 页面类型、App shell、页面骨架和响应式起点 |
 
 ### 使用
 
@@ -74,7 +74,7 @@ $design-spec-book
 
 ### Features
 
-- Creates and maintains six design declarations: `spec.md`, `domain.md`, `craft.md`, `design.md`, `components`, and `template`.
+- Creates and maintains six design declarations: `spec.md`, `domain.md`, `craft.md`, `design.md`, `components.md`, and `template.md`.
 - Separates behavior, domain language, design craft, visual tokens, component boundaries, and page structure.
 - Scans project entry points, routes, components, styles, and tokens, then syncs only observable facts.
 - Preserves human-authored decisions outside the managed block.
@@ -88,8 +88,8 @@ $design-spec-book
 | `domain.md` | Business objects, terminology, risk, and responsibility rules |
 | `craft.md` | Typography, information density, state feedback, and motion craft |
 | `design.md` | Colors, typography, spacing, state tokens, and visual rules |
-| `components` | Component responsibilities, semantic boundaries, and accessibility |
-| `template` | Page types, app shell, page skeleton, and responsive starting points |
+| `components.md` | Component responsibilities, semantic boundaries, and accessibility |
+| `template.md` | Page types, app shell, page skeleton, and responsive starting points |
 
 ### Usage
 
@@ -111,4 +111,3 @@ Use the design-spec-book skill to initialize and sync the six design documents f
 - [GitHub repository](https://github.com/lyx404/design-spec-book)
 
 MIT License.
-

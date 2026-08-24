@@ -1,6 +1,6 @@
 ---
 name: design-spec-book
-description: "为网页、App 和其他产品设计项目生成并维护六份设计声明文档：spec.md、domain.md、craft.md、design.md、components、template；在明确使用设计说明书 skill 或持续修改设计项目时调用。"
+description: "为网页、App 和其他产品设计项目生成并维护六份设计声明文档：spec.md、domain.md、craft.md、design.md、components.md、template.md；在明确使用设计说明书 skill 或持续修改设计项目时调用。"
 ---
 
 # 设计说明书
@@ -15,7 +15,7 @@ description: "为网页、App 和其他产品设计项目生成并维护六份�
 - 目标项目默认为当前工作目录；用户指定项目路径时以指定路径为准。
 - 用户主动发起“同步设计说明书”“确认方案”或明确要求收敛时，使用即时模式更新正式文档。
 - 用户没有主动发起同步时，AI 再进入同一项目要先运行被动检查：读取 `.design-spec/state.json`，判断是否存在已静默的待同步工作单元；达到阈值后只收敛受影响文档。
-- 默认在目标项目根目录生成：`spec.md`、`domain.md`、`craft.md`、`design.md`、`components`、`template`（最后两份按参考图保留无扩展名，但内容仍是 Markdown）。
+- 默认在目标项目根目录生成：`spec.md`、`domain.md`、`craft.md`、`design.md`、`components.md`、`template.md`。
 
 ## 工作流
 
@@ -59,8 +59,8 @@ python3 <design-spec-book>/scripts/install_git_hook.py \
 | `domain.md` | 业务对象、状态、风险、敏感数据和操作责任如何表达 | 通用排版、token 命名、页面布局 |
 | `craft.md` | 排版层级、密度、动效、材质和反模板化工艺 | 项目业务术语和品牌 token 事实源 |
 | `design.md` | token、视觉语义、状态派生、系统缺口 | 功能流程和组件语义选择 |
-| `components` | 可用组件、语义边界、易混组件和状态 | 页面整体骨架和业务规则 |
-| `template` | 页面类型、App shell、信息架构起点和密度 | 单个组件实现细节 |
+| `components.md` | 可用组件、语义边界、易混组件和状态 | 页面整体骨架和业务规则 |
+| `template.md` | 页面类型、App shell、信息架构起点和密度 | 单个组件实现细节 |
 
 六份模板的完整字段见 [references/document-contract.md](references/document-contract.md)。模板资源位于 `assets/templates/`，不包含任何项目具体内容。
 

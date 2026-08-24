@@ -51,8 +51,8 @@ DOC_TEMPLATES = {
     "domain.md": "domain.md",
     "craft.md": "craft.md",
     "design.md": "design.md",
-    "components": "components.md",
-    "template": "template.md",
+    "components.md": "components.md",
+    "template.md": "template.md",
 }
 STATE_DIR_NAME = ".design-spec"
 STATE_FILE_NAME = "state.json"
@@ -192,11 +192,11 @@ def affected_documents(changed_files: Iterable[str]) -> set[str]:
         if path.name.lower() in {"package.json", "readme.md", "readme.mdx", "pyproject.toml", "pubspec.yaml"}:
             affected.update(DOC_TEMPLATES)
         if parts & {"app", "pages", "routes"} or path.name.lower() in {"app.tsx", "app.jsx", "main.tsx", "main.jsx", "main.ts", "main.js"}:
-            affected.update({"spec.md", "template"})
+            affected.update({"spec.md", "template.md"})
         if "component" in parts or re.search(r"/(?:[A-Z][A-Za-z0-9_-]*\.(?:tsx|jsx|vue|svelte))$", "/" + value):
-            affected.update({"components", "design.md", "craft.md"})
+            affected.update({"components.md", "design.md", "craft.md"})
         if suffix in {".css", ".scss"} or any(marker in lower for marker in ("theme", "token", "tailwind")):
-            affected.update({"design.md", "craft.md", "template"})
+            affected.update({"design.md", "craft.md", "template.md"})
         if any(marker in lower for marker in ("schema", "model", "domain", "permission", "auth", "policy", "api")):
             affected.update({"domain.md", "spec.md"})
         if "test" in parts or suffix in {".spec", ".test"}:
@@ -426,12 +426,12 @@ def blocks_for(facts: dict[str, str]) -> dict[str, str]:
             f"- 可能的视觉字面量数量（需人工判断）：`{facts['literal_count']}`",
             "- 脚本不会自动把字面量认定为错误；请结合项目规范回写 Token 缺口。",
         ]),
-        "components": managed_block("项目事实（自动同步）", [
+        "components.md": managed_block("项目事实（自动同步）", [
             f"- 组件目录与文件线索：{facts['components']}",
             f"- UI 依赖与组件库线索：{facts['frameworks']}",
             f"- 入口文件：{facts['entrypoints']}",
         ]),
-        "template": managed_block("项目事实（自动同步）", [
+        "template.md": managed_block("项目事实（自动同步）", [
             f"- 页面/路由线索：{facts['routes']}",
             f"- App shell 与布局入口：{facts['entrypoints']}",
             f"- 响应式实现线索：{facts['responsive']}",
